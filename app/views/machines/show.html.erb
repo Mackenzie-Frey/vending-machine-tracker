@@ -3,3 +3,11 @@
   Name: <%= item.name %>
   Price: $<%= item.price %>
 <% end %>
+
+<% counter = 0 %>
+<% average_price = (counter / @machine.items.count) %>
+<% @machine.items.each do |item| %>
+  <% item.price += counter %>
+<% end %>
+
+Average Price: $<%= average_price %>
